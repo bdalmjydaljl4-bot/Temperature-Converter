@@ -1,70 +1,60 @@
-* {
-  box-sizing: border-box;
-}
-
+/* تنسيق عام للجسم */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  transition: background 0.4s ease;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
 }
 
+/* عنوان الصفحة */
+h1 {
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* الحاوية الرئيسية للبطاقات */
 .container {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  width: 320px;
-  text-align: center;
+    display: flex;               /* ترتيب البطاقات صفياً */
+    justify-content: center;     /* توسيط البطاقات أفقياً */
+    gap: 20px;                   /* مسافة بين البطاقات */
+    flex-wrap: wrap;             /* إذا الشاشة صغيرة، البطاقات تنتقل للسطر التالي */
 }
 
-h2 {
-  margin-top: 0;
+/* كل بطاقة */
+.card {
+    width: 180px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background-color 0.3s; /* حركة سلسة عند التغيير */
 }
 
-input,
-select,
-button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
+/* عنوان البطاقة */
+.card h2 {
+    margin: 0 0 10px 0;
+    color: #333;
 }
 
-input:focus,
-select:focus {
-  border-color: #4e73df;
-  outline: none;
+/* نص البطاقة */
+.card p {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 14px;
 }
 
-button {
-  border: none;
-  background-color: #4e73df;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
+/* الزر */
+.card button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #4682B4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-button:hover {
-  background-color: #2e59d9;
-}
-
-button.secondary {
-  background-color: #858796;
-}
-
-button.secondary:hover {
-  background-color: #60616f;
-}
-
-#result {
-  margin-top: 15px;
-  font-weight: bold;
-  font-size: 18px;
+.card button:hover {
+    background-color: #1e90ff;
 }
