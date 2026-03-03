@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محول درجات الحرارة 🌡️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>محول درجات الحرارة</h2>
+
+    <input
+      type="number"
+      id="temperatureInput"
+      placeholder="أدخل درجة الحرارة"
+    />
+
+    <select id="unitSelect">
+      <option value="celsius">Celsius (°C)</option>
+      <option value="fahrenheit">Fahrenheit (°F)</option>
+    </select>
+
+    <button id="convertBtn">تحويل</button>
+    <button id="clearBtn" class="secondary">مسح</button>
+
+    <p id="result"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
